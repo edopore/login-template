@@ -1,8 +1,20 @@
 import "./Login.css";
 import imageDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 import imagemobile from "../assets/images/illustration-sign-up-mobile.svg";
+import { useState } from "react";
 
 export function Login() {
+  const checkemail = (email) => {
+    const re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    return re.test(email);
+  };
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(event.target[0].value);
+    console.log(checkemail(event.target[0].value));
+  }
+
   return (
     <>
       <main className="main">
@@ -21,7 +33,7 @@ export function Login() {
                     </p>
                   </li>
                   <li>
-                    <ul>
+                    <ul className="list-icon">
                       <li>
                         <p className="desc">
                           Product discovery and building what matters
@@ -38,15 +50,15 @@ export function Login() {
                     </ul>
                   </li>
                   <li>
-                    <form className="subscribe-form">
-                      <label htmlFor="">Email address</label>
+                    <form className="subscribe-form" onSubmit={handleSubmit}>
+                      <label>Email address</label>
                       <input
                         type="email"
-                        name=""
-                        id=""
+                        name="email"
+                        id="email-form"
                         placeholder="email@company.com"
                       />
-                      <button type="submit">
+                      <button id="submit-email" type="submit">
                         Subscribe to monthly newsletter
                       </button>
                     </form>

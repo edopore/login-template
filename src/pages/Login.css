@@ -25,7 +25,47 @@ li p {
   justify-content: space-around;
   gap: 15px;
 }
+.subscribe-list li {
+  margin-bottom: 25px;
+}
+.list-icon {
+  list-style-image: url(../assets/images/icon-list.svg);
+  padding-left: 30px;
+}
 
+.form-list {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+.subscribe-form label {
+  font-family: "Roboto-Regular";
+  font-weight: 700;
+  font-size: 15px;
+}
+.subscribe-form input {
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--grey);
+}
+.subscribe-form button {
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--darkSlateGrey);
+  color: var(--white);
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+}
+button:hover {
+  cursor: pointer;
+}
 .footer {
   display: none;
 }
