@@ -1,0 +1,34 @@
+h1 {
+  color: var(--darkSlateGrey);
+}
+ul {
+  list-style: none;
+  text-align: start;
+}
+li p {
+  font-size: 16px;
+  color: var(--charcoalGrey);
+}
+.success-form {
+  display: none;
+}
+.main {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 15px;
+}
+.container {
+  height: 40%;
+}
+.subscribe-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.footer {
+  display: none;
+}
+.login-title {
+  font-size: 34px;
+}
